@@ -1,0 +1,15 @@
+
+<%= form_tag :action=>'send_mail' do %>
+    <%=label_tag 'template name' %>
+    <%=text_field_tag 'template_name'%>
+    <br/>
+    <%=label_tag 'Subject' %>
+    <%=text_field_tag 'subject'%>
+    <br/>
+
+    <%=label_tag 'emails' %>
+    <%=text_field_tag 'emails'%>
+
+
+    <div><%= submit_tag 'Send' %></div>
+<% end -%>

@@ -38,3 +38,6 @@ gem 'spring',        group: :development
 
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 gem 'bson_ext'
+
+gem 'mandrill_mailer'
+gem 'haml'

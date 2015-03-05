@@ -2,14 +2,35 @@
 <%= form_tag :action=>'send_mail' do %>
     <%=label_tag 'template name' %>
     <%=text_field_tag 'template_name'%>
-    <br/>
+    <br/><br/>
     <%=label_tag 'Subject' %>
     <%=text_field_tag 'subject'%>
-    <br/>
+    <br/><br/>
 
     <%=label_tag 'emails' %>
     <%=text_area_tag 'emails'%>
 
 
-    <div><%= submit_tag 'Send' %></div>
+    <div><%= submit_tag 'Send',  data: {confirm: "Are you sure?"}  %></div>
 <% end -%>
+
+<style>
+    input {
+        border: 1px solid #848484;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        outline:0;
+        height:25px;
+        width: 275px;
+        padding-left:10px;
+        padding-right:10px;
+    }
+
+    textarea{
+        width: 800px !important;
+        height: 400px !important;
+        overflow-y: auto !important;
+    }
+</style>
+

@@ -1,7 +1,7 @@
 require 'mandrill'
 
 class InvitationMailer < MandrillMailer::TemplateMailer
-  default from: 'info@maisasolutions.com'
+  default from: ENV["default_email"]
 
   def invite(emails, subject, template)
     mandrill_mail(
